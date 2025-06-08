@@ -1,0 +1,472 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Técnico - Estratégias de Endomarketing para Vitta Farma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        secondary: '#8B5CF6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .scroll-smooth { scroll-behavior: smooth; }
+        .prose-custom h2 { @apply text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200; }
+        .prose-custom h3 { @apply text-xl font-semibold mb-3 text-gray-700 dark:text-gray-300; }
+        .prose-custom p { @apply mb-4 text-gray-600 dark:text-gray-400 leading-relaxed; }
+        .prose-custom ul { @apply mb-4 pl-6; }
+        .prose-custom li { @apply mb-2 text-gray-600 dark:text-gray-400; }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Header -->
+    <header class="bg-primary text-white py-6 shadow-lg">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Relatório Técnico</h1>
+            <p class="text-xl opacity-90">Estratégias de Endomarketing para Vitta Farma</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-100 dark:bg-gray-800 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6">
+            <ul class="flex flex-wrap gap-4 py-4 text-sm">
+                <li><a href="#introducao" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Introdução</a></li>
+                <li><a href="#diagnostico" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Análise Diagnóstica</a></li>
+                <li><a href="#propostas" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Propostas</a></li>
+                <li><a href="#justificativas" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Justificativas</a></li>
+                <li><a href="#conclusao" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Conclusão</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 sticky top-24">
+                    <h3 class="font-semibold mb-4 text-gray-800 dark:text-gray-200">Navegação Rápida</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#introducao" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">• Introdução</a></li>
+                        <li><a href="#diagnostico" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">• Análise Diagnóstica</a></li>
+                        <li><a href="#propostas" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">• Propostas de Intervenção</a></li>
+                        <li><a href="#justificativas" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">• Justificativas</a></li>
+                        <li><a href="#conclusao" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">• Conclusão</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <!-- Introdução -->
+                <section id="introducao" class="mb-12">
+                    <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8 mb-8">
+                        <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-lightbulb text-primary mr-3"></i>Introdução
+                        </h2>
+                        <div class="prose-custom">
+                            <p>Imagine uma empresa em crescimento, com números financeiros impressionantes, mas onde os corredores ecoam com desmotivação e os talentos escapam pelas portas. Essa é a realidade da <strong>Vitta Farma</strong>, uma distribuidora nacional de medicamentos e materiais hospitalares que enfrenta desafios internos como alta rotatividade voluntária, falta de engajamento, comunicação deficiente entre setores e desconexão com seus valores e objetivos.</p>
+                            
+                            <p>O <strong>endomarketing</strong>, conceito popularizado por Analisa de Medeiros Brum, surge como uma solução estratégica. Trata-se de aplicar princípios de marketing internamente, tratando os funcionários como clientes internos para alinhá-los à missão da empresa, aumentar a motivação e melhorar o clima organizacional.</p>
+                            
+                            <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 mt-6">
+                                <p class="font-medium text-blue-800 dark:text-blue-200">Para Vitta Farma, o endomarketing não é um luxo, mas uma necessidade para transformar seu ambiente interno e sustentar seu sucesso comercial.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Análise Diagnóstica -->
+                <section id="diagnostico" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+                        <i class="fas fa-search text-primary mr-3"></i>Análise Diagnóstica
+                    </h2>
+                    
+                    <div class="prose-custom mb-6">
+                        <p>Vitta Farma enfrenta uma crise silenciosa que se manifesta em cinco problemas principais:</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
+                            <h3 class="font-semibold text-red-800 dark:text-red-200 mb-3">
+                                <i class="fas fa-door-open mr-2"></i>Alta Rotatividade Voluntária
+                            </h3>
+                            <p class="text-red-700 dark:text-red-300 text-sm">A saída frequente de colaboradores sugere insatisfação ou falta de conexão com a empresa.</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-6">
+                            <h3 class="font-semibold text-orange-800 dark:text-orange-200 mb-3">
+                                <i class="fas fa-battery-empty mr-2"></i>Falta de Engajamento
+                            </h3>
+                            <p class="text-orange-700 dark:text-orange-300 text-sm">Equipes desmotivadas produzem menos e se envolvem pouco com os objetivos organizacionais.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-6">
+                            <h3 class="font-semibold text-yellow-800 dark:text-yellow-200 mb-3">
+                                <i class="fas fa-comments-slash mr-2"></i>Comunicação Interdepartamental Fraca
+                            </h3>
+                            <p class="text-yellow-700 dark:text-yellow-300 text-sm">Departamentos operando em silos geram ineficiências e conflitos.</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-6">
+                            <h3 class="font-semibold text-purple-800 dark:text-purple-200 mb-3">
+                                <i class="fas fa-eye-slash mr-2"></i>Ausência de Reconhecimento
+                            </h3>
+                            <p class="text-purple-700 dark:text-purple-300 text-sm">Sem valorização ou retorno sobre seu trabalho, os colaboradores podem se sentir invisíveis.</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 md:col-span-2">
+                            <h3 class="font-semibold text-blue-800 dark:text-blue-200 mb-3">
+                                <i class="fas fa-compass mr-2"></i>Baixa Percepção dos Valores e Objetivos
+                            </h3>
+                            <p class="text-blue-700 dark:text-blue-300 text-sm">Muitos funcionários desconhecem ou não se identificam com a missão da empresa.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                        <h3 class="font-semibold mb-4 text-gray-800 dark:text-gray-200">Fatores Contribuintes:</h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="flex items-center text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-user-tie text-primary mr-3"></i>Liderança Não Preparada
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-chart-line text-primary mr-3"></i>Falta de Oportunidades de Crescimento
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-broadcast-tower text-primary mr-3"></i>Canais de Comunicação Ineficazes
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-heart-broken text-primary mr-3"></i>Cultura Organizacional Frágil
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Propostas de Intervenção -->
+                <section id="propostas" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+                        <i class="fas fa-rocket text-primary mr-3"></i>Propostas de Intervenção
+                    </h2>
+                    
+                    <!-- Tabs -->
+                    <div class="mb-6">
+                        <div class="border-b border-gray-200 dark:border-gray-700">
+                            <nav class="flex space-x-8">
+                                <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm focus:outline-none border-primary text-primary" data-tab="curto-prazo">
+                                    Curto Prazo
+                                </button>
+                                <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm focus:outline-none border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" data-tab="medio-prazo">
+                                    Médio Prazo
+                                </button>
+                                <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm focus:outline-none border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" data-tab="longo-prazo">
+                                    Longo Prazo
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div id="curto-prazo" class="tab-content">
+                        <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 mb-6">
+                            <h3 class="text-xl font-semibold mb-4 text-green-800 dark:text-green-200">
+                                <i class="fas fa-clock mr-2"></i>Ações de Curto Prazo
+                            </h3>
+                            <p class="text-green-700 dark:text-green-300 mb-4">Implementação Imediata, Baixo Custo</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-green-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-users text-green-500 mr-2"></i>Reuniões de "Town Hall" Mensais
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Encontros mensais onde a liderança compartilha atualizações sobre resultados, projetos e planos futuros, aumentando a transparência.</p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-green-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-handshake text-green-500 mr-2"></i>Programa de Reconhecimento Peer-to-Peer
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Sistema onde colaboradores reconhecem uns aos outros por contribuições significativas, criando uma cultura de apreciação.</p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-green-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-comments text-green-500 mr-2"></i>Plataformas de Comunicação Interna
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Implementar ferramentas como Slack ou Microsoft Teams com canais dedicados a projetos e eventos.</p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-green-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-comment-dots text-green-500 mr-2"></i>Mecanismos de Feedback Anônimo
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Caixas de sugestões físicas ou pesquisas online anônimas para coletar opiniões dos colaboradores.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="medio-prazo" class="tab-content hidden">
+                        <div class="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 mb-6">
+                            <h3 class="text-xl font-semibold mb-4 text-yellow-800 dark:text-yellow-200">
+                                <i class="fas fa-calendar-alt mr-2"></i>Ações de Médio Prazo
+                            </h3>
+                            <p class="text-yellow-700 dark:text-yellow-300 mb-4">Planejamento Moderado, Maior Envolvimento</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-yellow-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-project-diagram text-yellow-500 mr-2"></i>Projetos Interdepartamentais
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Formar equipes mistas de diferentes setores para trabalhar em iniciativas específicas, promovendo colaboração.</p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-yellow-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-chalkboard-teacher text-yellow-500 mr-2"></i>Treinamento de Liderança
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Workshops para gestores sobre comunicação eficaz, feedback construtivo e técnicas de engajamento.</p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-yellow-500">
+                                <h4 class="font-semibent mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-user-plus text-yellow-500 mr-2"></i>Programa de Onboarding Aprimorado
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Reformular o processo de integração para incluir apresentações detalhadas sobre valores e missão.</p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-yellow-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-heart text-yellow-500 mr-2"></i>Iniciativas de Bem-Estar
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Dias de folga flexíveis, oficinas de saúde mental ou parcerias com academias.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="longo-prazo" class="tab-content hidden">
+                        <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 mb-6">
+                            <h3 class="text-xl font-semibold mb-4 text-purple-800 dark:text-purple-200">
+                                <i class="fas fa-chess mr-2"></i>Ações de Longo Prazo
+                            </h3>
+                            <p class="text-purple-700 dark:text-purple-300 mb-4">Impacto Estrutural, Mudança Cultural</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-purple-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-seedling text-purple-500 mr-2"></i>Transformação Cultural
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Integrar os valores da empresa nas práticas diárias, como avaliações de desempenho baseadas em alinhamento cultural.</p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-purple-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-route text-purple-500 mr-2"></i>Caminhos de Carreira Claros
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Desenvolver planos de progressão profissional com metas claras e oportunidades de treinamento.</p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-purple-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-user-friends text-purple-500 mr-2"></i>Grupos de Recursos (ERGs)
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Criar grupos baseados em interesses como inovação, diversidade ou sustentabilidade.</p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-purple-500">
+                                <h4 class="font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                                    <i class="fas fa-chart-bar text-purple-500 mr-2"></i>Pesquisas de Clima Regulares
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Pesquisas anuais para avaliar engajamento, satisfação e áreas de melhoria.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Justificativas -->
+                <section id="justificativas" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+                        <i class="fas fa-balance-scale text-primary mr-3"></i>Justificativas
+                    </h2>
+                    
+                    <div class="prose-custom mb-6">
+                        <p>As ações propostas são fundamentadas em princípios de endomarketing e teorias de gestão de pessoas:</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-6">
+                            <h3 class="font-semibold mb-3 text-blue-800 dark:text-blue-200">
+                                <i class="fas fa-bullhorn mr-2"></i>Comunicação e Transparência
+                            </h3>
+                            <p class="text-blue-700 dark:text-blue-300">Reuniões de Town Hall e plataformas digitais seguem a ideia de democratizar a informação, reduzindo rumores e alinhando colaboradores aos objetivos.</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg p-6">
+                            <h3 class="font-semibold mb-3 text-green-800 dark:text-green-200">
+                                <i class="fas fa-star mr-2"></i>Reconhecimento e Motivação
+                            </h3>
+                            <p class="text-green-700 dark:text-green-300">O reconhecimento peer-to-peer é mais autêntico e motivador, criando uma cultura de valorização contínua.</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-6">
+                            <h3 class="font-semibold mb-3 text-purple-800 dark:text-purple-200">
+                                <i class="fas fa-puzzle-piece mr-2"></i>Integração e Colaboração
+                            </h3>
+                            <p class="text-purple-700 dark:text-purple-300">Projetos interdepartamentais e ERGs quebram silos e promovem uma cultura colaborativa essencial para a eficiência.</p>
+                        </div>
+                    </div>
+
+                    <!-- Indicadores -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Indicadores de Sucesso</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white dark:bg-gray-800 rounded-lg shadow">
+                                <thead class="bg-gray-50 dark:bg-gray-700">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Indicador</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Descrição</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Meta</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200 dark:divide-gray-600">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">Taxa de Rotatividade</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Percentual de saídas voluntárias</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 dark:text-green-400">Reduzir em 30% em 12 meses</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">Engajamento</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Pontuação em pesquisas de clima</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 dark:text-green-400">Aumentar para 80%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">Satisfação dos Colaboradores</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Avaliação geral do ambiente de trabalho</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 dark:text-green-400">Alcançar 75% de aprovação</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">Participação em Programas</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">Envolvimento em ERGs e reconhecimento</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 dark:text-green-400">60% dos colaboradores ativos</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusão -->
+                <section id="conclusao" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+                        <i class="fas fa-flag-checkered text-primary mr-3"></i>Conclusão
+                    </h2>
+                    
+                    <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
+                        <div class="prose-custom">
+                            <p>O caso da Vitta Farma destaca o poder do endomarketing para transformar organizações enfrentando desafios internos. Ao diagnosticar problemas como rotatividade e falta de engajamento, e propor ações estratégicas, este relatório mostra como o endomarketing pode criar um ambiente onde os colaboradores se sintam valorizados e conectados.</p>
+                            
+                            <p>As lições aprendidas reforçam que o endomarketing não é apenas sobre comunicação, mas sobre construir uma cultura que inspire e motive.</p>
+                            
+                            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 mt-6 border-l-4 border-primary">
+                                <p class="font-medium text-primary mb-2">Reflexão Final:</p>
+                                <p class="italic">"Como o endomarketing pode continuar a evoluir para atender às necessidades de uma força de trabalho em constante mudança? A resposta está na curiosidade, na escuta ativa e no compromisso com as pessoas."</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2024 Relatório Técnico - Estratégias de Endomarketing para Vitta Farma</p>
+            <p class="mt-2 text-gray-400">Desenvolvido com foco na transformação organizacional através do endomarketing</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode setup
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                // Remove active class from all buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('border-primary', 'text-primary');
+                    btn.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300', 'dark:text-gray-400', 'dark:hover:text-gray-300');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('border-primary', 'text-primary');
+                this.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300', 'dark:text-gray-400', 'dark:hover:text-gray-300');
+                
+                // Hide all tab contents
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                // Show selected tab content
+                document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-primary', 'font-semibold');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary', 'font-semibold');
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
